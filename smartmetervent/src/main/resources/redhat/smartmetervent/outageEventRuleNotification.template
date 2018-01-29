@@ -225,7 +225,7 @@
     <entry>
       <string>outageEventThresold</string>
       <list>
-        <string></string>
+        <string>3</string>
       </list>
     </entry>
     <entry>
