@@ -182,25 +182,35 @@
   <table>
     <entry>
       <string>__ID_KOL_NAME__</string>
-      <list/>
+      <list>
+        <string>1</string>
+      </list>
     </entry>
     <entry>
       <string>OutageEventThresold</string>
-      <list/>
+      <list>
+        <string>3</string>
+      </list>
     </entry>
     <entry>
       <string>emailId</string>
-      <list/>
+      <list>
+        <string>jpaulraj@redhat.com</string>
+      </list>
     </entry>
     <entry>
       <string>$outageMessage</string>
-      <list/>
+      <list>
+        <string>electricity outage happend more than 3 time within 1000ms</string>
+      </list>
     </entry>
     <entry>
       <string>UtilityType</string>
-      <list/>
+      <list>
+        <string>Electricity</string>
+      </list>
     </entry>
   </table>
-  <idCol>0</idCol>
-  <rowsCount>0</rowsCount>
+  <idCol>1</idCol>
+  <rowsCount>1</rowsCount>
 </rule>
