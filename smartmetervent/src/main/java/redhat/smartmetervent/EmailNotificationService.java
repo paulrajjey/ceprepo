@@ -11,4 +11,8 @@ public class EmailNotificationService implements java.io.Serializable {
     public EmailNotificationService() {
     }
 
+    public static void sendEmailNotification(redhat.smartmetervent.Notification notification){
+    
+    
+    }
 }
