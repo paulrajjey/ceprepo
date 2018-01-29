@@ -13,6 +13,8 @@ public class Notification implements java.io.Serializable
    private java.lang.String emailId;
    private java.lang.String message;
 
+   private java.util.List<redhat.smartmetervent.SmartMeterOutageEvent> outageEvents;
+
    public Notification()
    {
    }
@@ -47,12 +49,25 @@ public class Notification implements java.io.Serializable
       this.message = message;
    }
 
+   public java.util.List<redhat.smartmetervent.SmartMeterOutageEvent> getOutageEvents()
+   {
+      return this.outageEvents;
+   }
+
+   public void setOutageEvents(
+         java.util.List<redhat.smartmetervent.SmartMeterOutageEvent> outageEvents)
+   {
+      this.outageEvents = outageEvents;
+   }
+
    public Notification(java.lang.String id, java.lang.String emailId,
-         java.lang.String message)
+         java.lang.String message,
+         java.util.List<redhat.smartmetervent.SmartMeterOutageEvent> outageEvents)
    {
       this.id = id;
       this.emailId = emailId;
       this.message = message;
+      this.outageEvents = outageEvents;
    }
 
 }
