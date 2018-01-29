@@ -140,7 +140,38 @@
       <function>count(outageEvt)</function>
     </fromAccumulateCompositePattern>
   </lhs>
-  <rhs/>
+  <rhs>
+    <assert>
+      <fieldValues>
+        <fieldValue>
+          <field>id</field>
+          <value>=outageEventMeterId</value>
+          <nature>2</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>emailId</field>
+          <value>emailID</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>message</field>
+          <value>emailMessage</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>outageEvents</field>
+          <value>events</value>
+          <nature>3</nature>
+          <type>Collection</type>
+        </fieldValue>
+      </fieldValues>
+      <factType>Notification</factType>
+      <isBound>false</isBound>
+    </assert>
+  </rhs>
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
@@ -161,6 +192,18 @@
       <string>__ID_KOL_NAME__</string>
       <list>
         <string>1</string>
+      </list>
+    </entry>
+    <entry>
+      <string>emailMessage</string>
+      <list>
+        <string>Electricity outage occured #1 times for the meter id #2</string>
+      </list>
+    </entry>
+    <entry>
+      <string>emailID</string>
+      <list>
+        <string>jpaulraj@redhat.com</string>
       </list>
     </entry>
     <entry>
