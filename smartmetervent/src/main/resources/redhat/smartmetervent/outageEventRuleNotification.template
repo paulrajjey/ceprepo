@@ -1,7 +1,12 @@
 <rule>
   <name>outageEventRuleNotification</name>
   <modelVersion>1.0</modelVersion>
-  <attributes/>
+  <attributes>
+    <attribute>
+      <attributeName>dialect</attributeName>
+      <value>java</value>
+    </attribute>
+  </attributes>
   <metadataList/>
   <lhs>
     <fact>
