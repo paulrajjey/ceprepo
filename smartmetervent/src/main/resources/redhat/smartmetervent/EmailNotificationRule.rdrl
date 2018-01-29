@@ -1,0 +1,9 @@
+package redhat.smartmetervent;
+
+import java.lang.Number;
+
+rule "EmailNotificationRule"
+	dialect "mvel"
+	when
+	then
+end
