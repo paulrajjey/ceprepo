@@ -46,30 +46,30 @@
         <constraintList>
           <constraints>
             <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-              <value>OutageEventThresold</value>
-              <operator>&gt;</operator>
+              <value>outageEventThresold</value>
+              <operator>==</operator>
               <constraintValueType>7</constraintValueType>
               <expression>
                 <parts/>
                 <index>2147483647</index>
               </expression>
               <parameters/>
-              <fieldName>intValue</fieldName>
+              <fieldName>size</fieldName>
               <fieldType>int</fieldType>
               <expLeftSide>
                 <parts>
                   <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
                     <next class="method">
                       <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
-                      <name>intValue</name>
+                      <name>size</name>
                       <classType>int</classType>
                       <genericType>Integer</genericType>
                       <params/>
                     </next>
-                    <name>Number</name>
-                    <classType>Number</classType>
-                    <genericType>Number</genericType>
-                    <factType>Number</factType>
+                    <name>List</name>
+                    <classType>List</classType>
+                    <genericType>List</genericType>
+                    <factType>List</factType>
                   </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
                   <method reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
                 </parts>
@@ -78,7 +78,8 @@
             </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
           </constraints>
         </constraintList>
-        <factType>Number</factType>
+        <factType>List</factType>
+        <boundName>events</boundName>
         <isNegated>false</isNegated>
         <window>
           <parameters/>
@@ -163,7 +164,7 @@
       </list>
     </entry>
     <entry>
-      <string>OutageEventThresold</string>
+      <string>outageEventThresold</string>
       <list>
         <string>3</string>
       </list>
