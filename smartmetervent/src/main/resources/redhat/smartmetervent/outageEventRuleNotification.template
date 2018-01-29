@@ -19,6 +19,18 @@
             <fieldName>meterID</fieldName>
             <fieldType>String</fieldType>
           </fieldConstraint>
+          <fieldConstraint>
+            <constraintValueType>0</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <fieldBinding>notifiction</fieldBinding>
+            <factType>SmartMeterOutageEvent</factType>
+            <fieldName>notification</fieldName>
+            <fieldType>Notification</fieldType>
+          </fieldConstraint>
         </constraints>
       </constraintList>
       <factType>SmartMeterOutageEvent</factType>
@@ -127,7 +139,31 @@
       <function>count(outageEvent)</function>
     </fromAccumulateCompositePattern>
   </lhs>
-  <rhs/>
+  <rhs>
+    <setField>
+      <fieldValues>
+        <fieldValue>
+          <field>id</field>
+          <value>=outageEventMeterId</value>
+          <nature>2</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>emailId</field>
+          <value>emailId</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>message</field>
+          <value>$outageMessage</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+      </fieldValues>
+      <variable>notifiction</variable>
+    </setField>
+  </rhs>
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
@@ -150,6 +186,14 @@
     </entry>
     <entry>
       <string>OutageEventThresold</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>emailId</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>$outageMessage</string>
       <list/>
     </entry>
     <entry>
