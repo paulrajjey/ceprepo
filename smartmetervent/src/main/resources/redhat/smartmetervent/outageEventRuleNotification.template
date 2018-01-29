@@ -106,19 +106,6 @@
               <fieldType>String</fieldType>
             </fieldConstraint>
             <fieldConstraint>
-              <value>UtilityType</value>
-              <operator>==</operator>
-              <constraintValueType>7</constraintValueType>
-              <expression>
-                <parts/>
-                <index>2147483647</index>
-              </expression>
-              <parameters/>
-              <factType>SmartMeterOutageEvent</factType>
-              <fieldName>type</fieldName>
-              <fieldType>String</fieldType>
-            </fieldConstraint>
-            <fieldConstraint>
               <value>outageEvent</value>
               <operator>!=</operator>
               <constraintValueType>2</constraintValueType>
@@ -130,6 +117,19 @@
               <factType>SmartMeterOutageEvent</factType>
               <fieldName>this</fieldName>
               <fieldType>this</fieldType>
+            </fieldConstraint>
+            <fieldConstraint>
+              <value>UtilityType</value>
+              <operator>==</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>SmartMeterOutageEvent</factType>
+              <fieldName>type</fieldName>
+              <fieldType>String</fieldType>
             </fieldConstraint>
           </constraints>
         </constraintList>
