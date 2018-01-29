@@ -6,5 +6,7 @@ rule "outageEventRule"
 	dialect "mvel"
 	when
 		smartmeter : SmartMeterOutageEvent( meterId : meterID)
+		Number( intValue() > 3 ) from accumulate ( outageEVent : SmartMeterOutageEvent( meterID == meterId ) over window:time (3s),
+			count(outageEVent)) 
 	then
 end
