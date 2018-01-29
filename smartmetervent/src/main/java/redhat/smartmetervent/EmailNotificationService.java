@@ -13,6 +13,12 @@ public class EmailNotificationService implements java.io.Serializable {
 
     public static void sendEmailNotification(redhat.smartmetervent.Notification notification){
     
-    
+        java.util.List msg = new java.util.ArrayList();
+        java.lang.String body = notification.getMessage();
+        
+        msg.add(0,notification.getEmailId());
+        msg.add(1,notification.getMessage());
+        msg.add(2,"Electricity outage notification for " + notification.getId() );
+        com.service.email.EmailService.sendEmailNotification(msg);
     }
 }
