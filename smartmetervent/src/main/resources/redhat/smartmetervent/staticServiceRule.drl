@@ -1,2 +1,3 @@
 package redhat.smartmetervent;
 
+import function redhat.smartmetervent.EmailNotificationService.sendEmailNotification;
