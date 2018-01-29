@@ -120,7 +120,7 @@
           </constraints>
         </constraintList>
         <factType>SmartMeterOutageEvent</factType>
-        <boundName>outageEvent</boundName>
+        <boundName>outageEvt</boundName>
         <isNegated>false</isNegated>
         <window>
           <operator>over window:time</operator>
@@ -136,7 +136,7 @@
           </parameters>
         </window>
       </sourcePattern>
-      <function>count(outageEvent)</function>
+      <function>count(outageEvt)</function>
     </fromAccumulateCompositePattern>
   </lhs>
   <rhs>
