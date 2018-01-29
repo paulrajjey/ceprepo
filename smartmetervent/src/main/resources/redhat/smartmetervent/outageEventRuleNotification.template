@@ -4,7 +4,7 @@
   <attributes>
     <attribute>
       <attributeName>dialect</attributeName>
-      <value>java</value>
+      <value>mvel</value>
     </attribute>
   </attributes>
   <metadataList/>
@@ -51,9 +51,9 @@
         <constraintList>
           <constraints>
             <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-              <value>outageThresold</value>
+              <value>3</value>
               <operator>&gt;=</operator>
-              <constraintValueType>7</constraintValueType>
+              <constraintValueType>1</constraintValueType>
               <expression>
                 <parts/>
                 <index>2147483647</index>
@@ -222,12 +222,6 @@
       <string>emailID</string>
       <list>
         <string>jpaulraj@redhat.com</string>
-      </list>
-    </entry>
-    <entry>
-      <string>outageThresold</string>
-      <list>
-        <string>3</string>
       </list>
     </entry>
     <entry>
