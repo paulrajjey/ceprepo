@@ -1,0 +1,9 @@
+package redhat.smartmetervent;
+
+import java.lang.Number;
+
+rule "outageEventRule"
+	dialect "mvel"
+	when
+	then
+end
