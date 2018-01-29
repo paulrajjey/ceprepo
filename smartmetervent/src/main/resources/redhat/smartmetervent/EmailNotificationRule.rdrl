@@ -5,6 +5,7 @@ import java.lang.Number;
 rule "EmailNotificationRule"
 	dialect "mvel"
 	when
-		exists (notification : Notification( )) 
+		notification : Notification( )
 	then
+		sendEmailNotification(notification);
 end
