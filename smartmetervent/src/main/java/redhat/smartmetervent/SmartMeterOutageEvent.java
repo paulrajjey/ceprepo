@@ -21,6 +21,8 @@ public class SmartMeterOutageEvent implements java.io.Serializable
    private java.util.Date timestamp;
    private java.lang.String zone;
 
+   private redhat.smartmetervent.Notification notification;
+
    public SmartMeterOutageEvent()
    {
    }
@@ -115,11 +117,22 @@ public class SmartMeterOutageEvent implements java.io.Serializable
       this.zone = zone;
    }
 
+   public redhat.smartmetervent.Notification getNotification()
+   {
+      return this.notification;
+   }
+
+   public void setNotification(redhat.smartmetervent.Notification notification)
+   {
+      this.notification = notification;
+   }
+
    public SmartMeterOutageEvent(java.lang.String utility,
          java.lang.String meterID, java.lang.String amiGUIID,
          java.lang.String amiMac, java.lang.String type,
          java.lang.String address, java.lang.String messageID,
-         java.util.Date timestamp, java.lang.String zone)
+         java.util.Date timestamp, java.lang.String zone,
+         redhat.smartmetervent.Notification notification)
    {
       this.utility = utility;
       this.meterID = meterID;
@@ -130,6 +143,7 @@ public class SmartMeterOutageEvent implements java.io.Serializable
       this.messageID = messageID;
       this.timestamp = timestamp;
       this.zone = zone;
+      this.notification = notification;
    }
 
 }
