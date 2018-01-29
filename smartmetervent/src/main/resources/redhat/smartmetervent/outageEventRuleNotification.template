@@ -45,19 +45,40 @@
       <factPattern>
         <constraintList>
           <constraints>
-            <fieldConstraint>
-              <value>events.size() &gt;=3</value>
-              <constraintValueType>5</constraintValueType>
+            <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+              <value>outageThresold</value>
+              <operator>&gt;=</operator>
+              <constraintValueType>7</constraintValueType>
               <expression>
                 <parts/>
                 <index>2147483647</index>
               </expression>
               <parameters/>
-              <fieldType></fieldType>
-            </fieldConstraint>
+              <fieldName>size</fieldName>
+              <fieldType>int</fieldType>
+              <expLeftSide>
+                <parts>
+                  <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                    <next class="method">
+                      <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
+                      <name>size</name>
+                      <classType>int</classType>
+                      <genericType>Integer</genericType>
+                      <params/>
+                    </next>
+                    <name>ArrayList</name>
+                    <classType>ArrayList</classType>
+                    <genericType>ArrayList</genericType>
+                    <factType>ArrayList</factType>
+                  </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                  <method reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
+                </parts>
+                <index>2147483647</index>
+              </expLeftSide>
+            </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
           </constraints>
         </constraintList>
-        <factType>List</factType>
+        <factType>ArrayList</factType>
         <boundName>events</boundName>
         <isNegated>false</isNegated>
         <window>
@@ -196,6 +217,12 @@
       <string>emailID</string>
       <list>
         <string>jpaulraj@redhat.com</string>
+      </list>
+    </entry>
+    <entry>
+      <string>outageThresold</string>
+      <list>
+        <string>3</string>
       </list>
     </entry>
     <entry>
