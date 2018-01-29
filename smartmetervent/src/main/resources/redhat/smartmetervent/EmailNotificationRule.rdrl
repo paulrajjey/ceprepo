@@ -8,4 +8,5 @@ rule "EmailNotificationRule"
 		notification : Notification( )
 	then
 		sendEmailNotification(notification);
+		retract( notification );
 end
