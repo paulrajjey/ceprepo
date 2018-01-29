@@ -139,31 +139,7 @@
       <function>count(outageEvt)</function>
     </fromAccumulateCompositePattern>
   </lhs>
-  <rhs>
-    <setField>
-      <fieldValues>
-        <fieldValue>
-          <field>id</field>
-          <value>=outageEventMeterId</value>
-          <nature>2</nature>
-          <type>String</type>
-        </fieldValue>
-        <fieldValue>
-          <field>emailId</field>
-          <value>emailId</value>
-          <nature>7</nature>
-          <type>String</type>
-        </fieldValue>
-        <fieldValue>
-          <field>message</field>
-          <value>$outageMessage</value>
-          <nature>7</nature>
-          <type>String</type>
-        </fieldValue>
-      </fieldValues>
-      <variable>notifiction</variable>
-    </setField>
-  </rhs>
+  <rhs/>
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
@@ -190,18 +166,6 @@
       <string>OutageEventThresold</string>
       <list>
         <string>3</string>
-      </list>
-    </entry>
-    <entry>
-      <string>emailId</string>
-      <list>
-        <string>jpaulraj@redhat.com</string>
-      </list>
-    </entry>
-    <entry>
-      <string>$outageMessage</string>
-      <list>
-        <string>electricity outage happend more than 3 time within 1000ms</string>
       </list>
     </entry>
     <entry>
