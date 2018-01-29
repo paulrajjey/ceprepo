@@ -3,16 +3,156 @@
   <modelVersion>1.0</modelVersion>
   <attributes/>
   <metadataList/>
-  <lhs/>
+  <lhs>
+    <fact>
+      <constraintList>
+        <constraints>
+          <fieldConstraint>
+            <constraintValueType>0</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <fieldBinding>outageEventMeterId</fieldBinding>
+            <factType>SmartMeterOutageEvent</factType>
+            <fieldName>meterID</fieldName>
+            <fieldType>String</fieldType>
+          </fieldConstraint>
+        </constraints>
+      </constraintList>
+      <factType>SmartMeterOutageEvent</factType>
+      <isNegated>false</isNegated>
+      <window>
+        <operator></operator>
+        <parameters/>
+      </window>
+    </fact>
+    <fromAccumulateCompositePattern>
+      <factPattern>
+        <constraintList>
+          <constraints>
+            <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+              <value>OutageEventThresold</value>
+              <operator>&gt;</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <fieldName>intValue</fieldName>
+              <fieldType>int</fieldType>
+              <expLeftSide>
+                <parts>
+                  <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                    <next class="method">
+                      <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
+                      <name>intValue</name>
+                      <classType>int</classType>
+                      <genericType>Integer</genericType>
+                      <params/>
+                    </next>
+                    <name>Number</name>
+                    <classType>Number</classType>
+                    <genericType>Number</genericType>
+                    <factType>Number</factType>
+                  </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                  <method reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
+                </parts>
+                <index>2147483647</index>
+              </expLeftSide>
+            </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+          </constraints>
+        </constraintList>
+        <factType>Number</factType>
+        <isNegated>false</isNegated>
+        <window>
+          <parameters/>
+        </window>
+      </factPattern>
+      <expression>
+        <parts/>
+        <index>2147483647</index>
+      </expression>
+      <sourcePattern class="fact">
+        <constraintList>
+          <constraints>
+            <fieldConstraint>
+              <value>outageEventMeterId</value>
+              <operator>==</operator>
+              <constraintValueType>2</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>SmartMeterOutageEvent</factType>
+              <fieldName>meterID</fieldName>
+              <fieldType>String</fieldType>
+            </fieldConstraint>
+            <fieldConstraint>
+              <value>UtilityType</value>
+              <operator>==</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>SmartMeterOutageEvent</factType>
+              <fieldName>type</fieldName>
+              <fieldType>String</fieldType>
+            </fieldConstraint>
+          </constraints>
+        </constraintList>
+        <factType>SmartMeterOutageEvent</factType>
+        <boundName>outageEvent</boundName>
+        <isNegated>false</isNegated>
+        <window>
+          <operator>over window:time</operator>
+          <parameters>
+            <entry>
+              <string>1</string>
+              <string>1000ms</string>
+            </entry>
+            <entry>
+              <string>org.drools.workbench.models.commons.backend.rule.operatorParameterGenerator</string>
+              <string>org.drools.workbench.models.commons.backend.rule.CEPWindowOperatorParameterDRLBuilder</string>
+            </entry>
+          </parameters>
+        </window>
+      </sourcePattern>
+      <function>count(outageEvent)</function>
+    </fromAccumulateCompositePattern>
+  </lhs>
   <rhs/>
   <imports>
-    <imports/>
+    <imports>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>java.lang.Number</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>java.util.ArrayList</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>java.util.List</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+    </imports>
   </imports>
   <packageName>redhat.smartmetervent</packageName>
   <isNegated>false</isNegated>
   <table>
     <entry>
       <string>__ID_KOL_NAME__</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>OutageEventThresold</string>
+      <list/>
+    </entry>
+    <entry>
+      <string>UtilityType</string>
       <list/>
     </entry>
   </table>
