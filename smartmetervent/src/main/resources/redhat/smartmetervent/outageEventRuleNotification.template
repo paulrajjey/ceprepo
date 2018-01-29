@@ -46,14 +46,14 @@
         <parameters/>
       </window>
     </fact>
-    <fromAccumulateCompositePattern>
+    <fromCollectCompositePattern>
       <factPattern>
         <constraintList>
           <constraints>
             <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-              <value>3</value>
+              <value>outageEventThresold</value>
               <operator>&gt;=</operator>
-              <constraintValueType>1</constraintValueType>
+              <constraintValueType>7</constraintValueType>
               <expression>
                 <parts/>
                 <index>2147483647</index>
@@ -71,10 +71,10 @@
                       <genericType>Integer</genericType>
                       <params/>
                     </next>
-                    <name>ArrayList</name>
-                    <classType>ArrayList</classType>
-                    <genericType>ArrayList</genericType>
-                    <factType>ArrayList</factType>
+                    <name>List</name>
+                    <classType>List</classType>
+                    <genericType>List</genericType>
+                    <factType>List</factType>
                   </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
                   <method reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
                 </parts>
@@ -83,7 +83,7 @@
             </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
           </constraints>
         </constraintList>
-        <factType>ArrayList</factType>
+        <factType>List</factType>
         <boundName>events</boundName>
         <isNegated>false</isNegated>
         <window>
@@ -94,22 +94,9 @@
         <parts/>
         <index>2147483647</index>
       </expression>
-      <sourcePattern class="fact">
+      <rightPattern class="fact">
         <constraintList>
           <constraints>
-            <fieldConstraint>
-              <value>outageEventMeterId</value>
-              <operator>==</operator>
-              <constraintValueType>2</constraintValueType>
-              <expression>
-                <parts/>
-                <index>2147483647</index>
-              </expression>
-              <parameters/>
-              <factType>SmartMeterOutageEvent</factType>
-              <fieldName>meterID</fieldName>
-              <fieldType>String</fieldType>
-            </fieldConstraint>
             <fieldConstraint>
               <value>outageEvent</value>
               <operator>!=</operator>
@@ -122,6 +109,19 @@
               <factType>SmartMeterOutageEvent</factType>
               <fieldName>this</fieldName>
               <fieldType>this</fieldType>
+            </fieldConstraint>
+            <fieldConstraint>
+              <value>outageEventMeterId</value>
+              <operator>==</operator>
+              <constraintValueType>2</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>SmartMeterOutageEvent</factType>
+              <fieldName>meterID</fieldName>
+              <fieldType>String</fieldType>
             </fieldConstraint>
             <fieldConstraint>
               <value>UtilityType</value>
@@ -139,7 +139,6 @@
           </constraints>
         </constraintList>
         <factType>SmartMeterOutageEvent</factType>
-        <boundName>outageEvt</boundName>
         <isNegated>false</isNegated>
         <window>
           <operator>over window:time</operator>
@@ -154,9 +153,8 @@
             </entry>
           </parameters>
         </window>
-      </sourcePattern>
-      <function>count(outageEvt)</function>
-    </fromAccumulateCompositePattern>
+      </rightPattern>
+    </fromCollectCompositePattern>
   </lhs>
   <rhs>
     <assert>
@@ -222,6 +220,12 @@
       <string>emailID</string>
       <list>
         <string>jpaulraj@redhat.com</string>
+      </list>
+    </entry>
+    <entry>
+      <string>outageEventThresold</string>
+      <list>
+        <string></string>
       </list>
     </entry>
     <entry>
