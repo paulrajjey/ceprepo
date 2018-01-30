@@ -5,5 +5,5 @@ query "outage events"
 end
 
 query "notification events" 
-    outageEvents : List() from collect ( redhat.smartmetervent.Notification( ) )
+    notificationEvents : List() from collect ( redhat.smartmetervent.Notification( ) )
 end
