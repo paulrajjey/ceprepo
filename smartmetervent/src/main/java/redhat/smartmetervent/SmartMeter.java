@@ -6,7 +6,7 @@ package redhat.smartmetervent;
 
 @org.kie.api.definition.type.Role(org.kie.api.definition.type.Role.Type.EVENT)
 @org.kie.api.definition.type.Timestamp("timestamp")
-public class SmartMeter implements java.io.Serializable
+public class OutageEvent implements java.io.Serializable
 {
 
    static final long serialVersionUID = 1L;
@@ -23,7 +23,7 @@ public class SmartMeter implements java.io.Serializable
 
    private redhat.smartmetervent.Notification notification;
 
-   public SmartMeter()
+   public OutageEvent()
    {
    }
 
@@ -140,7 +140,7 @@ public class SmartMeter implements java.io.Serializable
       this.notification.setMessage(message);
    }
 
-   public SmartMeter(java.lang.String utility, java.lang.String meterID,
+   public OutageEvent(java.lang.String utility, java.lang.String meterID,
          java.lang.String amiGUIID, java.lang.String amiMac,
          java.lang.String type, java.lang.String address,
          java.lang.String messageID, java.util.Date timestamp,
