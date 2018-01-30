@@ -66,19 +66,6 @@
         <constraintList>
           <constraints>
             <fieldConstraint>
-              <value>outageEvent</value>
-              <operator>!=</operator>
-              <constraintValueType>2</constraintValueType>
-              <expression>
-                <parts/>
-                <index>2147483647</index>
-              </expression>
-              <parameters/>
-              <factType>SmartMeterOutageEvent</factType>
-              <fieldName>this</fieldName>
-              <fieldType>this</fieldType>
-            </fieldConstraint>
-            <fieldConstraint>
               <value>outageEventMeterId</value>
               <operator>==</operator>
               <constraintValueType>2</constraintValueType>
