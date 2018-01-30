@@ -29,6 +29,48 @@
       </window>
     </fact>
     <fromCollectCompositePattern>
+      <factPattern>
+        <constraintList>
+          <constraints>
+            <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+              <value>outageThresold</value>
+              <operator>&gt;=</operator>
+              <constraintValueType>7</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <fieldName>size</fieldName>
+              <fieldType>int</fieldType>
+              <expLeftSide>
+                <parts>
+                  <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                    <next class="method">
+                      <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
+                      <name>size</name>
+                      <classType>int</classType>
+                      <genericType>Integer</genericType>
+                      <params/>
+                    </next>
+                    <name>List</name>
+                    <classType>List</classType>
+                    <genericType>List</genericType>
+                    <factType>List</factType>
+                  </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
+                  <method reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
+                </parts>
+                <index>2147483647</index>
+              </expLeftSide>
+            </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
+          </constraints>
+        </constraintList>
+        <factType>List</factType>
+        <isNegated>false</isNegated>
+        <window>
+          <parameters/>
+        </window>
+      </factPattern>
       <expression>
         <parts/>
         <index>2147483647</index>
@@ -82,9 +124,17 @@
   <table>
     <entry>
       <string>__ID_KOL_NAME__</string>
-      <list/>
+      <list>
+        <string>1</string>
+      </list>
+    </entry>
+    <entry>
+      <string>outageThresold</string>
+      <list>
+        <string>3</string>
+      </list>
     </entry>
   </table>
-  <idCol>0</idCol>
-  <rowsCount>0</rowsCount>
+  <idCol>1</idCol>
+  <rowsCount>1</rowsCount>
 </rule>
