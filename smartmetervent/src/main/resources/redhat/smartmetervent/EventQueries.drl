@@ -1,2 +1,5 @@
 package redhat.smartmetervent;
 
+query "outage events" 
+    outageEvents : List() from collect ( redhat.smartmetervent.OutageEvent( ) )
+end
