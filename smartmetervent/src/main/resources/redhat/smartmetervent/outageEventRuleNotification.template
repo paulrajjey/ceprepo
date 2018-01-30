@@ -52,7 +52,6 @@
           <constraints>
             <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
               <value>outageEventThresold</value>
-              <operator>&gt;=</operator>
               <constraintValueType>7</constraintValueType>
               <expression>
                 <parts/>
@@ -141,17 +140,8 @@
         <factType>SmartMeterOutageEvent</factType>
         <isNegated>false</isNegated>
         <window>
-          <operator>over window:time</operator>
-          <parameters>
-            <entry>
-              <string>1</string>
-              <string>1000ms</string>
-            </entry>
-            <entry>
-              <string>org.drools.workbench.models.commons.backend.rule.operatorParameterGenerator</string>
-              <string>org.drools.workbench.models.commons.backend.rule.CEPWindowOperatorParameterDRLBuilder</string>
-            </entry>
-          </parameters>
+          <operator></operator>
+          <parameters/>
         </window>
       </rightPattern>
     </fromCollectCompositePattern>
