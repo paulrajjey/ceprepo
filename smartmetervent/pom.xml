@@ -14,19 +14,19 @@
       <version>1.0</version>
     </dependency>
     <dependency>
-      <groupId>org.kie</groupId>
-      <artifactId>kie-api</artifactId>
-      <version>6.5.0.Final-redhat-2</version>
-      <scope>provided</scope>
-    </dependency>
+            <groupId>org.kie</groupId>
+            <artifactId>kie-api</artifactId>
+            <version>6.5.0.Final-redhat-2</version>
+            <scope>provided</scope>
+        </dependency>
   </dependencies>
-  <repositories>
+  <!--repositories>
     <repository>
       <id>guvnor-m2-repo</id>
       <name>Guvnor M2 Repo</name>
       <url>http://localhost:8080/business-central/maven2/</url>
     </repository>
-  </repositories>
+  </repositories-->
   <build>
     <plugins>
       <plugin>
@@ -34,6 +34,20 @@
         <artifactId>kie-maven-plugin</artifactId>
         <version>6.5.0.Final-redhat-2</version>
         <extensions>true</extensions>
+        <dependencies>
+                    <dependency>
+<!-- add this dependency if there are Processes located in the project-->
+                        <groupId>org.jbpm</groupId>
+                        <artifactId>jbpm-bpmn2</artifactId>
+                        <version>6.5.0.Final-redhat-2</version>
+                    </dependency>
+<!-- add this dependency if there are Decision tables located in the project-->
+                <dependency>
+                        <groupId>org.drools</groupId>
+                        <artifactId>drools-decisiontables</artifactId>
+                        <version>6.5.0.Final-redhat-2</version>
+                    </dependency>
+                </dependencies>
       </plugin>
     </plugins>
   </build>
