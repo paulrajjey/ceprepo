@@ -49,39 +49,7 @@
     <fromCollectCompositePattern>
       <factPattern>
         <constraintList>
-          <constraints>
-            <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-              <value>3</value>
-              <operator>&gt;=</operator>
-              <constraintValueType>1</constraintValueType>
-              <expression>
-                <parts/>
-                <index>2147483647</index>
-              </expression>
-              <parameters/>
-              <fieldName>size</fieldName>
-              <fieldType>int</fieldType>
-              <expLeftSide>
-                <parts>
-                  <org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                    <next class="method">
-                      <prev class="org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact" reference="../.."/>
-                      <name>size</name>
-                      <classType>int</classType>
-                      <genericType>Integer</genericType>
-                      <params/>
-                    </next>
-                    <name>List</name>
-                    <classType>List</classType>
-                    <genericType>List</genericType>
-                    <factType>List</factType>
-                  </org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact>
-                  <method reference="../org.drools.workbench.models.datamodel.rule.ExpressionUnboundFact/next"/>
-                </parts>
-                <index>2147483647</index>
-              </expLeftSide>
-            </org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-          </constraints>
+          <constraints/>
         </constraintList>
         <factType>List</factType>
         <boundName>events</boundName>
@@ -155,6 +123,9 @@
         </window>
       </rightPattern>
     </fromCollectCompositePattern>
+    <freeForm>
+      <text>eval(events.size() &gt;= 3)</text>
+    </freeForm>
   </lhs>
   <rhs>
     <assert>
