@@ -15,12 +15,11 @@ public class EmailNotificationService implements java.io.Serializable {
     
         java.util.List msg = new java.util.ArrayList();
         java.lang.String body = notification.getMessage();
-        System.out.println("size" + notification.getOutageEvents().size() );
 		java.lang.String v1 = body.replace("#1", String.valueOf( notification.getOutageEvents().size() ) );
 		java.lang.String v2 = v1.replace("#2", notification.getId());
 		
         msg.add(0,notification.getEmailId());
-        msg.add(1,notification.getMessage());
+        msg.add(1,v2);
         msg.add(2,"Electricity outage notification for " + notification.getId() );
         com.service.email.EmailService.sendEmailNotification(msg);
     }
