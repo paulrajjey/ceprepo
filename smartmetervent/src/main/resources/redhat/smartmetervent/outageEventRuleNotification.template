@@ -51,8 +51,9 @@
         <constraintList>
           <constraints>
             <org.drools.workbench.models.datamodel.rule.SingleFieldConstraintEBLeftSide>
-              <value>outageEventThresold</value>
-              <constraintValueType>7</constraintValueType>
+              <value>3</value>
+              <operator>&gt;=</operator>
+              <constraintValueType>1</constraintValueType>
               <expression>
                 <parts/>
                 <index>2147483647</index>
@@ -219,12 +220,6 @@
       <string>emailID</string>
       <list>
         <string>jpaulraj@redhat.com</string>
-      </list>
-    </entry>
-    <entry>
-      <string>outageEventThresold</string>
-      <list>
-        <string>3</string>
       </list>
     </entry>
     <entry>
