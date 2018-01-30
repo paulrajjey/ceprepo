@@ -1,9 +1,9 @@
 package redhat.smartmetervent;
 
 query "outage events" 
-    outageEvents : java.util.List() from collect ( redhat.smartmetervent.OutageEvent( ) )
+    outageEvents : java.util.List( size > 0) from collect ( redhat.smartmetervent.OutageEvent( ) )
 end
 
 query "notification events" 
-    notificationEvents : java.util.List() from collect ( redhat.smartmetervent.Notification( ) )
+    notificationEvents : java.util.List( size > 0 ) from collect ( redhat.smartmetervent.Notification( ) )
 end
