@@ -111,7 +111,7 @@
       </rightPattern>
     </fromCollectCompositePattern>
     <freeForm>
-      <text>eval(events.size() + 1 &gt;= 3)</text>
+      <text>eval(events.size()  &gt;= 3)</text>
     </freeForm>
   </lhs>
   <rhs>
