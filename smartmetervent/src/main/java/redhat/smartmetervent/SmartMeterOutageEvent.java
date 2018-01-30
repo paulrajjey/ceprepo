@@ -126,16 +126,18 @@ public class SmartMeterOutageEvent implements java.io.Serializable
    {
       this.notification = notification;
    }
-   
-   public void setNofication(java.lang.String id , java.lang.String emailId, java.lang.String message){
-       
-       if( this.notification == null){
-           this.notification = new redhat.smartmetervent.Notification();
-       } 
-       
-       this.notification.setId(id);
-       this.notification.setEmailId(emailId);
-       this.notification.setMessage(message);
+
+   public void setNofication(java.lang.String id, java.lang.String emailId, java.lang.String message)
+   {
+
+      if (this.notification == null)
+      {
+         this.notification = new redhat.smartmetervent.Notification();
+      }
+
+      this.notification.setId(id);
+      this.notification.setEmailId(emailId);
+      this.notification.setMessage(message);
    }
 
    public SmartMeterOutageEvent(java.lang.String utility,
