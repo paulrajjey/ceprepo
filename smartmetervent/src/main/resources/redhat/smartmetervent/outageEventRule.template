@@ -3,10 +3,79 @@
   <modelVersion>1.0</modelVersion>
   <attributes/>
   <metadataList/>
-  <lhs/>
+  <lhs>
+    <fact>
+      <constraintList>
+        <constraints>
+          <fieldConstraint>
+            <constraintValueType>0</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <fieldBinding>sMeterId</fieldBinding>
+            <factType>SmartMeter</factType>
+            <fieldName>meterID</fieldName>
+            <fieldType>String</fieldType>
+          </fieldConstraint>
+        </constraints>
+      </constraintList>
+      <factType>SmartMeter</factType>
+      <boundName>smartMeter</boundName>
+      <isNegated>false</isNegated>
+      <window>
+        <parameters/>
+      </window>
+    </fact>
+    <fromCollectCompositePattern>
+      <expression>
+        <parts/>
+        <index>2147483647</index>
+      </expression>
+      <rightPattern class="fact">
+        <constraintList>
+          <constraints>
+            <fieldConstraint>
+              <value>sMeterId</value>
+              <operator>==</operator>
+              <constraintValueType>2</constraintValueType>
+              <expression>
+                <parts/>
+                <index>2147483647</index>
+              </expression>
+              <parameters/>
+              <factType>OutageEvent</factType>
+              <fieldName>meterID</fieldName>
+              <fieldType>String</fieldType>
+            </fieldConstraint>
+          </constraints>
+        </constraintList>
+        <factType>OutageEvent</factType>
+        <isNegated>false</isNegated>
+        <window>
+          <operator>over window:time</operator>
+          <parameters>
+            <entry>
+              <string>1</string>
+              <string>1000ms</string>
+            </entry>
+            <entry>
+              <string>org.drools.workbench.models.commons.backend.rule.operatorParameterGenerator</string>
+              <string>org.drools.workbench.models.commons.backend.rule.CEPWindowOperatorParameterDRLBuilder</string>
+            </entry>
+          </parameters>
+        </window>
+      </rightPattern>
+    </fromCollectCompositePattern>
+  </lhs>
   <rhs/>
   <imports>
-    <imports/>
+    <imports>
+      <org.drools.workbench.models.datamodel.imports.Import>
+        <type>java.util.List</type>
+      </org.drools.workbench.models.datamodel.imports.Import>
+    </imports>
   </imports>
   <packageName>redhat.smartmetervent</packageName>
   <isNegated>false</isNegated>
