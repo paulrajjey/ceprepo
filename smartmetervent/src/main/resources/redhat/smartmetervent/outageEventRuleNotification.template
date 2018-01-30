@@ -140,8 +140,17 @@
         <factType>SmartMeterOutageEvent</factType>
         <isNegated>false</isNegated>
         <window>
-          <operator></operator>
-          <parameters/>
+          <operator>over window:time</operator>
+          <parameters>
+            <entry>
+              <string>1</string>
+              <string>1000ms</string>
+            </entry>
+            <entry>
+              <string>org.drools.workbench.models.commons.backend.rule.operatorParameterGenerator</string>
+              <string>org.drools.workbench.models.commons.backend.rule.CEPWindowOperatorParameterDRLBuilder</string>
+            </entry>
+          </parameters>
         </window>
       </rightPattern>
     </fromCollectCompositePattern>
