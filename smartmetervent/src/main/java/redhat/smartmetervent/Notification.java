@@ -49,15 +49,6 @@ public class Notification implements java.io.Serializable
       this.message = message;
    }
 
-   public Notification(java.lang.String id, java.lang.String emailId,
-         java.lang.String message,
-         java.util.List<redhat.smartmetervent.SmartMeterOutageEvent> outageEvents)
-   {
-      this.id = id;
-      this.emailId = emailId;
-      this.message = message;
-      this.outageEvents = outageEvents;
-   }
 
    public java.util.List<redhat.smartmetervent.OutageEvent> getOutageEvents()
    {
