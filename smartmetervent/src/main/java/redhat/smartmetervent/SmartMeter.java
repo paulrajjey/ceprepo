@@ -116,16 +116,78 @@ public class SmartMeter implements java.io.Serializable
       this.zone = zone;
    }
 
-   public redhat.smartmetervent.Notification getNotification()
-   {
-      return this.notification;
-   }
-
-   public void setNotification(redhat.smartmetervent.Notification notification)
-   {
-      this.notification = notification;
-   }
-
   
+
+  @Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((address == null) ? 0 : address.hashCode());
+		result = prime * result + ((amiGUIID == null) ? 0 : amiGUIID.hashCode());
+		result = prime * result + ((amiMac == null) ? 0 : amiMac.hashCode());
+		result = prime * result + ((messageID == null) ? 0 : messageID.hashCode());
+		result = prime * result + ((meterID == null) ? 0 : meterID.hashCode());
+		result = prime * result + ((timestamp == null) ? 0 : timestamp.hashCode());
+		result = prime * result + ((type == null) ? 0 : type.hashCode());
+		result = prime * result + ((utility == null) ? 0 : utility.hashCode());
+		result = prime * result + ((zone == null) ? 0 : zone.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		SmartMeter other = (SmartMeter) obj;
+		if (address == null) {
+			if (other.address != null)
+				return false;
+		} else if (!address.equals(other.address))
+			return false;
+		if (amiGUIID == null) {
+			if (other.amiGUIID != null)
+				return false;
+		} else if (!amiGUIID.equals(other.amiGUIID))
+			return false;
+		if (amiMac == null) {
+			if (other.amiMac != null)
+				return false;
+		} else if (!amiMac.equals(other.amiMac))
+			return false;
+		if (messageID == null) {
+			if (other.messageID != null)
+				return false;
+		} else if (!messageID.equals(other.messageID))
+			return false;
+		if (meterID == null) {
+			if (other.meterID != null)
+				return false;
+		} else if (!meterID.equals(other.meterID))
+			return false;
+		if (timestamp == null) {
+			if (other.timestamp != null)
+				return false;
+		} else if (!timestamp.equals(other.timestamp))
+			return false;
+		if (type == null) {
+			if (other.type != null)
+				return false;
+		} else if (!type.equals(other.type))
+			return false;
+		if (utility == null) {
+			if (other.utility != null)
+				return false;
+		} else if (!utility.equals(other.utility))
+			return false;
+		if (zone == null) {
+			if (other.zone != null)
+				return false;
+		} else if (!zone.equals(other.zone))
+			return false;
+		return true;
+	}
 
 }
