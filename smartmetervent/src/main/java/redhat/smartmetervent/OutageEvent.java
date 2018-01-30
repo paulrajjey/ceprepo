@@ -49,19 +49,7 @@ public class OutageEvent implements java.io.Serializable
       this.zone = zone;
    }
 
-   public void setNofication(java.lang.String id, java.lang.String emailId, java.lang.String message)
-   {
-
-      if (this.notification == null)
-      {
-         this.notification = new redhat.smartmetervent.Notification();
-      }
-
-      this.notification.setId(id);
-      this.notification.setEmailId(emailId);
-      this.notification.setMessage(message);
-   }
-
+   
    public OutageEvent(java.lang.String meterID, java.util.Date timestamp,
          java.lang.String zone)
    {
@@ -69,5 +57,40 @@ public class OutageEvent implements java.io.Serializable
       this.timestamp = timestamp;
       this.zone = zone;
    }
+   @Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((meterID == null) ? 0 : meterID.hashCode());
+		result = prime * result + ((timestamp == null) ? 0 : timestamp.hashCode());
+		result = prime * result + ((zone == null) ? 0 : zone.hashCode());
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		OutageEvent other = (OutageEvent) obj;
+		if (meterID == null) {
+			if (other.meterID != null)
+				return false;
+		} else if (!meterID.equals(other.meterID))
+			return false;
+		if (timestamp == null) {
+			if (other.timestamp != null)
+				return false;
+		} else if (!timestamp.equals(other.timestamp))
+			return false;
+		if (zone == null) {
+			if (other.zone != null)
+				return false;
+		} else if (!zone.equals(other.zone))
+			return false;
+		return true;
+	}
 
 }
