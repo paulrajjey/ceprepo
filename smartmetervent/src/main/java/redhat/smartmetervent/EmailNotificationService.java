@@ -15,7 +15,7 @@ public class EmailNotificationService implements java.io.Serializable {
     
         java.util.List msg = new java.util.ArrayList();
         java.lang.String body = notification.getMessage();
-		java.lang.String v1 = body.replace("#1", String.valueOf( notification.getOutageEvents().size() ) );
+		java.lang.String v1 = body.replace("#1", String.valueOf( notification.getOutageEvents().size() + 1 ) );
 		java.lang.String v2 = v1.replace("#2", notification.getId());
 		
         msg.add(0,notification.getEmailId());
