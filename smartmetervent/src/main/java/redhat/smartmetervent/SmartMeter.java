@@ -21,7 +21,6 @@ public class SmartMeter implements java.io.Serializable
    private java.util.Date timestamp;
    private java.lang.String zone;
 
-   private redhat.smartmetervent.Notification notification;
 
    public SmartMeter()
    {
@@ -127,35 +126,6 @@ public class SmartMeter implements java.io.Serializable
       this.notification = notification;
    }
 
-   public void setNofication(java.lang.String id, java.lang.String emailId, java.lang.String message)
-   {
-
-      if (this.notification == null)
-      {
-         this.notification = new redhat.smartmetervent.Notification();
-      }
-
-      this.notification.setId(id);
-      this.notification.setEmailId(emailId);
-      this.notification.setMessage(message);
-   }
-
-   public SmartMeter(java.lang.String utility, java.lang.String meterID,
-         java.lang.String amiGUIID, java.lang.String amiMac,
-         java.lang.String type, java.lang.String address,
-         java.lang.String messageID, java.util.Date timestamp,
-         java.lang.String zone, redhat.smartmetervent.Notification notification)
-   {
-      this.utility = utility;
-      this.meterID = meterID;
-      this.amiGUIID = amiGUIID;
-      this.amiMac = amiMac;
-      this.type = type;
-      this.address = address;
-      this.messageID = messageID;
-      this.timestamp = timestamp;
-      this.zone = zone;
-      this.notification = notification;
-   }
+  
 
 }
