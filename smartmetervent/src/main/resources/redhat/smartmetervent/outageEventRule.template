@@ -66,6 +66,7 @@
           </constraints>
         </constraintList>
         <factType>List</factType>
+        <boundName>outageEvents</boundName>
         <isNegated>false</isNegated>
         <window>
           <parameters/>
@@ -111,7 +112,38 @@
       </rightPattern>
     </fromCollectCompositePattern>
   </lhs>
-  <rhs/>
+  <rhs>
+    <assert>
+      <fieldValues>
+        <fieldValue>
+          <field>id</field>
+          <value>=sMeterId</value>
+          <nature>2</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>emailId</field>
+          <value>emailID</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>message</field>
+          <value>message</value>
+          <nature>7</nature>
+          <type>String</type>
+        </fieldValue>
+        <fieldValue>
+          <field>outageEvents</field>
+          <value>outageEvents</value>
+          <nature>3</nature>
+          <type>Collection</type>
+        </fieldValue>
+      </fieldValues>
+      <factType>Notification</factType>
+      <isBound>false</isBound>
+    </assert>
+  </rhs>
   <imports>
     <imports>
       <org.drools.workbench.models.datamodel.imports.Import>
@@ -129,9 +161,21 @@
       </list>
     </entry>
     <entry>
+      <string>emailID</string>
+      <list>
+        <string>jpaulraj@redhat.com</string>
+      </list>
+    </entry>
+    <entry>
       <string>outageThresold</string>
       <list>
         <string>3</string>
+      </list>
+    </entry>
+    <entry>
+      <string>message</string>
+      <list>
+        <string>Electricity outage occured #1 times for the meter id #2</string>
       </list>
     </entry>
   </table>
