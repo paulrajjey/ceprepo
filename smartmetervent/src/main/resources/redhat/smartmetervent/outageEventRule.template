@@ -19,6 +19,19 @@
             <fieldName>meterID</fieldName>
             <fieldType>String</fieldType>
           </fieldConstraint>
+          <fieldConstraint>
+            <value>zone</value>
+            <operator>==</operator>
+            <constraintValueType>7</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <factType>SmartMeter</factType>
+            <fieldName>zone</fieldName>
+            <fieldType>String</fieldType>
+          </fieldConstraint>
         </constraints>
       </constraintList>
       <factType>SmartMeter</factType>
@@ -158,17 +171,31 @@
       <string>__ID_KOL_NAME__</string>
       <list>
         <string>1</string>
+        <string>2</string>
+        <string>3</string>
+      </list>
+    </entry>
+    <entry>
+      <string>zone</string>
+      <list>
+        <string>1</string>
+        <string>2</string>
+        <string></string>
       </list>
     </entry>
     <entry>
       <string>emailID</string>
       <list>
         <string>aakella@redhat.com</string>
+        <string>jpaulraj@redhat.com</string>
+        <string>jreagan@redhat.com</string>
       </list>
     </entry>
     <entry>
       <string>outageThresold</string>
       <list>
+        <string>3</string>
+        <string>3</string>
         <string>3</string>
       </list>
     </entry>
@@ -176,9 +203,11 @@
       <string>message</string>
       <list>
         <string>Electricity outage occured #1 times for the meter id #2</string>
+        <string>Electricity outage occured #1 times for the meter id #2</string>
+        <string>Electricity outage occured #1 times for the meter id #2</string>
       </list>
     </entry>
   </table>
-  <idCol>1</idCol>
-  <rowsCount>1</rowsCount>
+  <idCol>3</idCol>
+  <rowsCount>3</rowsCount>
 </rule>
