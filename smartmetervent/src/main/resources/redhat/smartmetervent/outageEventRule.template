@@ -19,36 +19,6 @@
             <fieldName>meterID</fieldName>
             <fieldType>String</fieldType>
           </fieldConstraint>
-          <compositeConstraint>
-            <compositeJunctionType>||</compositeJunctionType>
-            <constraints>
-              <fieldConstraint>
-                <value>zone</value>
-                <operator>==</operator>
-                <constraintValueType>7</constraintValueType>
-                <expression>
-                  <parts/>
-                  <index>2147483647</index>
-                </expression>
-                <parameters/>
-                <factType>SmartMeter</factType>
-                <fieldName>zone</fieldName>
-                <fieldType>String</fieldType>
-              </fieldConstraint>
-              <fieldConstraint>
-                <operator>== null</operator>
-                <constraintValueType>0</constraintValueType>
-                <expression>
-                  <parts/>
-                  <index>2147483647</index>
-                </expression>
-                <parameters/>
-                <factType>SmartMeter</factType>
-                <fieldName>zone</fieldName>
-                <fieldType>String</fieldType>
-              </fieldConstraint>
-            </constraints>
-          </compositeConstraint>
         </constraints>
       </constraintList>
       <factType>SmartMeter</factType>
@@ -190,14 +160,6 @@
         <string>1</string>
         <string>2</string>
         <string>3</string>
-      </list>
-    </entry>
-    <entry>
-      <string>zone</string>
-      <list>
-        <string>1</string>
-        <string>2</string>
-        <string></string>
       </list>
     </entry>
     <entry>
