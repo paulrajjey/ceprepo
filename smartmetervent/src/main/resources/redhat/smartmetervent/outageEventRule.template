@@ -19,6 +19,18 @@
             <fieldName>meterID</fieldName>
             <fieldType>String</fieldType>
           </fieldConstraint>
+          <fieldConstraint>
+            <constraintValueType>0</constraintValueType>
+            <expression>
+              <parts/>
+              <index>2147483647</index>
+            </expression>
+            <parameters/>
+            <fieldBinding>emailAddress</fieldBinding>
+            <factType>SmartMeter</factType>
+            <fieldName>address</fieldName>
+            <fieldType>String</fieldType>
+          </fieldConstraint>
         </constraints>
       </constraintList>
       <factType>SmartMeter</factType>
@@ -122,12 +134,6 @@
           <type>String</type>
         </fieldValue>
         <fieldValue>
-          <field>emailId</field>
-          <value>emailID</value>
-          <nature>7</nature>
-          <type>String</type>
-        </fieldValue>
-        <fieldValue>
           <field>message</field>
           <value>message</value>
           <nature>7</nature>
@@ -138,6 +144,12 @@
           <value>outageEvents</value>
           <nature>3</nature>
           <type>Collection</type>
+        </fieldValue>
+        <fieldValue>
+          <field>emailId</field>
+          <value>=emailAddress</value>
+          <nature>2</nature>
+          <type>String</type>
         </fieldValue>
       </fieldValues>
       <factType>Notification</factType>
@@ -158,12 +170,6 @@
       <string>__ID_KOL_NAME__</string>
       <list>
         <string>1</string>
-      </list>
-    </entry>
-    <entry>
-      <string>emailID</string>
-      <list>
-        <string>aakella@redhat.com</string>
       </list>
     </entry>
     <entry>
